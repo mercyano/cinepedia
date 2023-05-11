@@ -1,11 +1,11 @@
-function App() {
+import Navbar from './components/Navbar';
+
+const App = () => {
   return (
-    <>
-      <h1 className="font-monserrat text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
+    <div className="font-monserrat text-white">
+      <Navbar />
+    </div>
   );
-}
+};
 
 export default App;

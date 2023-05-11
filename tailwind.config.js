@@ -11,6 +11,7 @@ export default {
       },
       colors: {
         dark: '#221F1F',
+        darkBlue: '#073A57',
       },
       fontFamily: {
         monserrat: ['Montserrat', 'sans-serif'],
