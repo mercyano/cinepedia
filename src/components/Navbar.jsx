@@ -21,12 +21,14 @@ const Navbar = () => {
   return (
     <div className="bg-darkBlue">
       {/* Navbar */}
-      <nav className="relative container mx-auto py-6 px-12">
+      <nav className="relative container mx-auto py-4 px-12">
         {/* Flex Container */}
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="w-48">
-            <img src={logo} alt="logo" />
+            <a href="#">
+              <img src={logo} alt="logo" />
+            </a>
           </div>
 
           <div className="flex items-center space-x-10">
