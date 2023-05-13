@@ -25,7 +25,7 @@ const Navbar = () => {
         {/* Flex Container */}
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="w-48">
+          <div className="w-48 z-10">
             <a href="#">
               <img src={logo} alt="logo" />
             </a>
@@ -37,13 +37,13 @@ const Navbar = () => {
               href="https://github.com/mercyano"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden md:block ml-4 text-white"
+              className="hidden z-10 md:block ml-4 text-white"
             >
               <FaGithub size={24} />
             </a>
             {/* Light Mode Toggle */}
             <button
-              className="hidden md:block ml-4 text-white focus:outline-none"
+              className="hidden z-10 md:block ml-4 text-white focus:outline-none"
               onClick={toggleLightMode}
             >
               {isLightMode ? <FaMoon size={24} /> : <FaSun size={24} />}
@@ -51,7 +51,7 @@ const Navbar = () => {
           </div>
           {/* Hamburger Menu */}
           <button
-            className="text-white focus:outline-none md:hidden"
+            className="text-white z-10 focus:outline-none md:hidden"
             onClick={toggleMenu}
           >
             <RiMenu3Line size={24} />
