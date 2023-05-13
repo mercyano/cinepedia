@@ -26,27 +26,30 @@ const MovieCard = () => {
     fetchUpcomingMovie();
   }, []);
   return (
-    <div className="flex flex-col w-56">
+    <div className="grid grid-cols-5 gap-x-4 gap-y-12">
       {upcomingMovie &&
         upcomingMovie.map((movie, index) => {
           return (
-            <div className="card-image" key={index}>
-              <img
-                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                alt=""
-              />
-              <div className="card-body m-2">
-                <h1 className="text-md font-semibold truncate mb-2">
-                  {movie.title}
-                </h1>
-                <div className="flex flex-row items-center text-sm">
-                  <p className=" text-slate-400">
-                    {movie.release_date.slice(0, 4)}
-                  </p>
-                  <p className="ml-auto">⭐ {movie.vote_average}</p>
+            <div
+              className="flex flex-col w-56 overflow-hidden rounded-md"
+              key={index}
+            >
+              <div className="card-image">
+                <img
+                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                  alt=""
+                />
+                <div className="card-body m-2">
+                  <h1 className="text-md font-semibold truncate mb-2">
+                    {movie.title}
+                  </h1>
+                  <div className="flex flex-row items-center text-sm">
+                    <p className=" text-slate-400">
+                      {movie.release_date.slice(0, 4)}
+                    </p>
+                    <p className="ml-auto">⭐ {movie.vote_average}</p>
+                  </div>
                 </div>
-
-                <br />
               </div>
             </div>
           );
