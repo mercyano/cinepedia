@@ -45,8 +45,8 @@ const Hero = () => {
               {heroMovie.overview}
             </p>
           </div>
-          <div className="animate-bounce flex justify-center items-center mb-16 mt-8 z-10">
-            <AiOutlineDown size={24} />
+          <div className="flex justify-center items-center mb-16 mt-8 z-10">
+            <AiOutlineDown className="animate-bounce" size={24} />
           </div>
 
           <div className="hero-shadow absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>

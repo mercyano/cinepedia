@@ -26,7 +26,7 @@ const MovieCard = () => {
     fetchUpcomingMovie();
   }, []);
   return (
-    <div className="grid grid-cols-1 place-items-center gap-x-4 gap-y-12 md:place-items-start md:grid-cols-3 lg:grid-cols-4">
+    <div className="grid grid-cols-1 place-items-center gap-x-4 gap-y-12  md:grid-cols-3 lg:grid-cols-4">
       {upcomingMovie &&
         upcomingMovie.map((movie, index) => {
           return (
