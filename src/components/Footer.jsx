@@ -2,7 +2,7 @@ import tmdb_logo from '../assets/tmdb_logo.svg';
 
 const Footer = () => {
   return (
-    <div className="footer flex flex-col justify-center items-center mt-16 mb-8 space-y-2">
+    <div className="footer flex flex-col justify-center items-center pt-16 pb-8 space-y-2 bg-gradient-to-b from-black to-darkBlue">
       <p className="text-sm text-slate-100">
         Made with ❤️ by{' '}
         <a
