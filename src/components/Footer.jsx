@@ -7,6 +7,8 @@ const Footer = () => {
         Made with ❤️ by{' '}
         <a
           href="https://github.com/mercyano"
+          target="_blank"
+          rel="noopener noreferrer"
           className="underline hover:decoration-cyan-400 hover:font-semibold"
         >
           mercyano
