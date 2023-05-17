@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const MovieCard = () => {
   const [upcomingMovie, setupcomingMovie] = useState([]);
@@ -30,7 +31,8 @@ const MovieCard = () => {
       {upcomingMovie &&
         upcomingMovie.map((movie, index) => {
           return (
-            <div
+            <Link
+              to={`/movies/${movie.id}`}
               className="flex flex-col w-56 overflow-hidden rounded-md"
               key={index}
             >
@@ -51,7 +53,7 @@ const MovieCard = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
     </div>
