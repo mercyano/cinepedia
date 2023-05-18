@@ -1,11 +1,14 @@
-// import MovieCard from '../components/MovieCard';
+/* eslint-disable react/prop-types */
+import { useParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 const MovieDetail = () => {
+  const { id } = useParams();
+
   return (
     <>
       <Navbar />
-      {/* <MovieCard /> */}
+      {console.log(id)}
     </>
   );
 };
