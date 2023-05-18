@@ -4,7 +4,7 @@ import logo from '../assets/cinepedia_logo.svg';
 
 const Navbar = () => {
   return (
-    <div className="bg-darkBlue">
+    <div className="bg-darkBlue z-10">
       {/* Navbar */}
       <nav className="relative container mx-auto py-4 px-12">
         {/* Flex Container */}

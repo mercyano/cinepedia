@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 
 const Home = () => {
   return (
-    <div className="font-monserrat text-white">
+    <div>
       <Navbar />
       <Hero />
       <Movies />
