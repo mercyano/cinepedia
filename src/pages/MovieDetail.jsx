@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import BackButton from '../components/BackButton';
+import Details from '../components/Details';
 import Footer from '../components/Footer';
 
 const MovieDetail = () => {
@@ -31,76 +32,51 @@ const MovieDetail = () => {
         <div>
           {/* Hero Image */}
           <div
-            className="relative h-[90vh] bg-no-repeat bg-cover flex flex-col"
+            className="hidden relative h-[90vh] bg-no-repeat bg-cover md:flex md:flex-col"
             style={{
               backgroundImage: `url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`,
             }}
           >
+            <div className="z-10 m-12">
+              <BackButton />
+            </div>
             {/* Left Shadow */}
             <div className="absolute h-[90vh] w-3/4 bg-gradient-to-r from-black to-transparent"></div>
 
-            {/* Hero Content */}
-            <div className="z-10 pl-12 w-2/5">
-              {/* Left Arrow Button */}
-              <Link to={'/'}>
-                <div className="mt-12">
-                  <button>
-                    <AiOutlineArrowLeft size={32} />
-                  </button>
-                </div>
-              </Link>
-
-              {/* Title */}
-              <h1 className="font-bold md:text-4xl mt-44">
-                {movieDetail.original_title}
-              </h1>
-
-              {/* Release Date, Runtime, Rating */}
-              <div className="text-slate-400 mt-4">
-                <p>
-                  {movieDetail.release_date &&
-                    movieDetail.release_date.slice(0, 4)}{' '}
-                  | {movieDetail.runtime} mins | ⭐{' '}
-                  {movieDetail.vote_average &&
-                    Number.parseFloat(movieDetail.vote_average).toFixed(1)}
-                </p>
-              </div>
-
-              {/* Genres */}
-              <div className=" mt-4">
-                {movieDetail.genres &&
-                  movieDetail.genres.map((genre) => (
-                    <span
-                      key={genre.id}
-                      className="px-1 py-1 text-sm rounded text-center bg-darkBlue text-white mr-3"
-                    >
-                      {genre.name}
-                    </span>
-                  ))}
-              </div>
-
-              {/* Overview */}
-              <div className="mt-4 font-medium text-white">
-                <p>{movieDetail.overview}</p>
-              </div>
-
-              {/* IMDB Link */}
-              <div className="mt-8 text-black font-bold">
-                <a
-                  href={`https://www.imdb.com/title/${movieDetail.imdb_id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#F7A209] p-2 rounded"
-                >
-                  View on IMDB
-                </a>
-              </div>
+            {/* Movie Details Content */}
+            <div className="mt-24 z-10">
+              <Details movieDetail={movieDetail} />
             </div>
+
             {/* Bottom Shadow */}
             <div className="absolute bottom-0 h-1/2 w-full bg-gradient-to-t from-black to-transparent"></div>
           </div>
+
+          {/* Mobile */}
+          <div className="relative md:hidden">
+            {/* Hero */}
+            <div
+              className="relative h-52 bg-cover"
+              style={{
+                backgroundImage: `url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`,
+              }}
+            >
+              <div className="absolute m-12">
+                <BackButton />
+              </div>
+
+              {/* Bottom Shadow */}
+              <div className="absolute bottom-0 h-16 w-full bg-gradient-to-t from-black to-transparent"></div>
+            </div>
+
+            {/* Details */}
+            <div className="mt-4">
+              <Details movieDetail={movieDetail} />
+            </div>
+          </div>
         </div>
       )}
+      <div className="h-32 bg-black md:h-4"></div>
       <Footer />
     </>
   );
