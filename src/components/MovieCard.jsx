@@ -37,10 +37,13 @@ const MovieCard = () => {
               key={index}
             >
               <div className="card-image">
-                <img
-                  src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
-                  alt=""
-                />
+                <div className="h-[336px] w-[224px] bg-slate-800 bg-gradient-to-t from-black to-slate-700">
+                  <img
+                    src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
+                    alt=""
+                  />
+                </div>
+
                 <div className="card-body m-2">
                   <h1 className="text-md mb-2 truncate font-semibold">
                     {movie.title}
