@@ -38,7 +38,7 @@ const MovieCard = () => {
             >
               <div className="card-image">
                 <img
-                  src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w342${movie.poster_path}`}
                   alt=""
                 />
                 <div className="card-body m-2">

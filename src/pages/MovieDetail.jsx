@@ -32,7 +32,7 @@ const MovieDetail = () => {
         <div>
           {/* Hero Image */}
           <div
-            className="hidden relative h-[90vh] bg-no-repeat bg-cover md:flex md:flex-col"
+            className="relative hidden h-[90vh] bg-cover bg-no-repeat md:flex md:flex-col"
             style={{
               backgroundImage: `url(https://image.tmdb.org/t/p/original${movieDetail.backdrop_path})`,
             }}
@@ -44,7 +44,7 @@ const MovieDetail = () => {
             <div className="absolute h-[90vh] w-3/4 bg-gradient-to-r from-black to-transparent"></div>
 
             {/* Movie Details Content */}
-            <div className="mt-24 z-10">
+            <div className="z-10 mt-24">
               <Details movieDetail={movieDetail} />
             </div>
 
