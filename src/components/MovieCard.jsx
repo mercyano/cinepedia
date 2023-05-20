@@ -33,7 +33,7 @@ const MovieCard = () => {
           return (
             <Link
               to={`/movies/${movie.id}`}
-              className="flex flex-col w-56 overflow-hidden rounded-md"
+              className="flex w-56 flex-col overflow-hidden rounded-md"
               key={index}
             >
               <div className="card-image">
@@ -42,14 +42,16 @@ const MovieCard = () => {
                   alt=""
                 />
                 <div className="card-body m-2">
-                  <h1 className="text-md font-semibold truncate mb-2">
+                  <h1 className="text-md mb-2 truncate font-semibold">
                     {movie.title}
                   </h1>
                   <div className="flex flex-row items-center text-sm">
                     <p className=" text-slate-400">
                       {movie.release_date.slice(0, 4)}
                     </p>
-                    <p className="ml-auto">⭐ {movie.vote_average}</p>
+                    <p className="ml-auto">
+                      ⭐ {Number.parseFloat(movie.vote_average).toFixed(1)}
+                    </p>
                   </div>
                 </div>
               </div>

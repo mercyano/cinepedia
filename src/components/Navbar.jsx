@@ -5,27 +5,27 @@ import SearchForm from './SearchForm';
 
 const Navbar = () => {
   return (
-    <div className="bg-darkBlue z-10">
+    <div className="z-10 bg-darkBlue">
       {/* Navbar */}
-      <nav className="relative container mx-auto py-4 px-12">
+      <nav className="container relative mx-auto px-4 py-2 md:px-24">
         {/* Flex Container */}
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="w-32 z-10 md:w-48">
+          <div className="z-10 w-32 md:w-48">
             <a href="/">
               <img src={logo} alt="logo" />
             </a>
           </div>
 
           {/* Menu Items */}
-          <div className="flex items-center ml-4 space-x-4 z-10">
+          <div className="z-10 ml-4 flex items-center space-x-4">
             {/* Search Form */}
             <div className="z-10">
               <SearchForm />
             </div>
             {/* GitHub Link */}
             <a
-              href="https://github.com/mercyano"
+              href="https://github.com/mercyano/cinepedia"
               target="_blank"
               rel="noopener noreferrer"
               className=" ml-4 text-white hover:text-gray-300"
