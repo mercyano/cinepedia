@@ -1,15 +1,14 @@
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const BackButton = () => {
+  const navigate = useNavigate();
   return (
-    <Link to={'/'}>
-      <div>
-        <button>
-          <AiOutlineArrowLeft size={32} />
-        </button>
-      </div>
-    </Link>
+    <div>
+      <button onClick={() => navigate(-1)}>
+        <AiOutlineArrowLeft size={32} />
+      </button>
+    </div>
   );
 };
 
