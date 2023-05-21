@@ -32,20 +32,20 @@ const Hero = () => {
     <div className="hero">
       {heroMovie && (
         <div
-          className="hero-image h-[80vh] bg-no-repeat bg-cover flex flex-col"
+          className="hero-image mt-12 flex h-[80vh] flex-col bg-cover bg-no-repeat"
           style={{
             backgroundImage: `url(https://image.tmdb.org/t/p/original${heroMovie.poster_path})`,
           }}
         >
-          <div className="hero-content my-auto mx-10 z-10 md:mx-40">
+          <div className="hero-content z-10 mx-10 my-auto md:mx-40">
             <h1 className="hero-title text-center text-5xl font-bold md:text-6xl">
               {heroMovie.title}
             </h1>
-            <p className="hidden hero-description text-justify text-lg mt-8 md:block">
+            <p className="hero-description mt-8 hidden text-justify text-lg md:block">
               {heroMovie.overview}
             </p>
           </div>
-          <div className="flex justify-center items-center mb-16 mt-8 z-10">
+          <div className="z-10 mb-16 mt-8 flex items-center justify-center">
             <AiOutlineDown className="animate-bounce" size={24} />
           </div>
 

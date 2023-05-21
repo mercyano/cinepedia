@@ -35,7 +35,7 @@ export default function SearchResults() {
     <div>
       <Navbar />
 
-      <div className="mx-4 mb-6 mt-8 font-medium text-slate-200 md:mx-24 md:text-xl md:font-semibold">
+      <div className="mx-4 mb-6 mt-20 font-medium text-slate-200 md:mx-24 md:text-xl md:font-semibold">
         <h1>Search results for: &quot;{query}&quot;</h1>
       </div>
 
