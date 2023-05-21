@@ -5,7 +5,7 @@ import SearchForm from './SearchForm';
 
 const Navbar = () => {
   return (
-    <div className="z-10 bg-darkBlue">
+    <div className="fixed top-0 z-20 w-full bg-darkBlue">
       {/* Navbar */}
       <nav className="container relative mx-auto px-4 py-2 md:px-24">
         {/* Flex Container */}
